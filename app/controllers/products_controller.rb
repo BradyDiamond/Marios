@@ -33,7 +33,6 @@ class ProductsController < ApplicationController
   def update
     @product= Product.find(params[:id])
     if @product.update(product_params)
-      binding.pry
       flash[:notice] = "product successfully updated!"
       redirect_to product_path
     else
@@ -45,7 +44,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
     flash[:notice] = "product successfully deleted!"
-    redirect_to product_path
+    redirect_to products_path
   end
 
   private

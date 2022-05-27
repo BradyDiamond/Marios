@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   def new
     @product = Product.find(params[:product_id])
-    @Review = @product.review.new
+    @review = @product.reviews.new
     render :new
   end
 
@@ -41,6 +41,10 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @review.destroy
     redirect_to product_path(@review.product)
+  end
+
+  def most_reviews
+  product = Product.most_reviews
   end
 
   private
