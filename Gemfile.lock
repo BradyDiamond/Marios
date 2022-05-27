@@ -64,6 +64,8 @@ GEM
     duktape (2.6.0.0)
     erubi (1.10.0)
     execjs (2.8.1)
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5-x86-mingw32)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -194,6 +196,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   duktape
+  faker
   jbuilder (~> 2.5)
   jquery-rails
   launchy
