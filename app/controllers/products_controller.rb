@@ -33,6 +33,7 @@ class ProductsController < ApplicationController
   def update
     @product= Product.find(params[:id])
     if @product.update(product_params)
+      binding.pry
       flash[:notice] = "product successfully updated!"
       redirect_to product_path
     else
@@ -47,9 +48,9 @@ class ProductsController < ApplicationController
     redirect_to product_path
   end
 
-  private
-    def product_params
-      params.require(:product).permit(:name, :cost, :country_of_origin)
-    end
+  # private
+  #   def product_params
+  #     params.require(:product).permit(:name, :cost, :country_of_origin)
+  #   end
 
   end
