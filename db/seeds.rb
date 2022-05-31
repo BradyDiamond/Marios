@@ -12,14 +12,19 @@ Review.destroy_all
 50.times do |index|
   Product.create!(name: Faker::Coffee.blend_name,
                   cost: Faker::Number.within(range: 1..500),
-                  country_of_origin: ("USA"))
-                    5.times do
+                  country_of_origin: ("USA"),
+                  id: Faker::Number.unique.within(range: 1..50))
+  #                   5.times do
+  #                     Review.create!(author: Faker::Name.name,
+  #                     rating: Faker::Number.within(range: 1..5),
+  #                     content_body: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: false))                  
+  # end      
+end
+250.times do
                       Review.create!(author: Faker::Name.name,
+                      product_id: Faker::Number.within(range: 1..50),
                       rating: Faker::Number.within(range: 1..5),
                       content_body: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: false))                  
-  end      
-end
- 
+end      
 
-
-
+p "Created #{Product.count} coffees"
