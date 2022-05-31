@@ -26,7 +26,7 @@
 
 ## Known Bugs
 
-* _currently no scope support, DB not seeding nested reviews_
+* _currently no scope support_
 
 ## License
 _licensed under the [MIT License] (LICENSE)_
