@@ -5,18 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-db/seeds.rb
+# db/seeds.rb
 Product.destroy_all
+Review.destroy_all
 
 50.times do |index|
-  Product.create!(name: Faker::Food.spice,
-                        cost: Faker::Lorem.number(20, false, 0).chop,
-                        country_of_origin: "USA")
-                        250.times do |index|
-                          Product.create!(name: Faker::Food.spice,
-                        cost: Faker::Lorem.sentence(20, false, 0).chop,
-                        country_of_origin: "USA")
+  Product.create!(name: Faker::Coffee.blend_name,
+                  cost: Faker::Number.within(range: 1..500),
+                  country_of_origin: ("USA"))
+                    5.times do
+                      Review.create!(author: Faker::Name.name,
+                      rating: Faker::Number.within(range: 1..5),
+                      content_body: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: false))                  
+  end      
 end
+ 
 
 
-p "Created #{Spice.count} spices"
+
