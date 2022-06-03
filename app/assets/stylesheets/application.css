@@ -42,27 +42,26 @@ text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black
   background-color: rgb(140, 63, 4);
 }
 #dropdownMenuButton2{
+  width:100%;
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
-  width:150px;   
   color: aliceblue;
   background-color: rgb(140, 63, 4);
 }
 #dropdownMenuButton3{
+  width:100%;
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
-  width:150px;   
   color: aliceblue;
   background-color: rgb(140, 63, 4);
 }
 #dropdownMenuButton4{
+  width:100%;
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
-  width:150px;   
   color: aliceblue;
   background-color: rgb(140, 63, 4);
 }
 #mario{
   width:350px; 
   height:350px;     
-  /* padding: 10px; */
   border-width: 8px;
   border-style:ridge;
   border-width: 10px;
@@ -73,4 +72,14 @@ text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black
 }
 .navbar-brand{
   color: rgb(250, 33, 5);
+}
+#form{
+  color: rgb(5, 250, 91);
+}
+#title-text{
+  color: rgb(250, 33, 5);
+}
+#star{
+  width:25px; 
+  height:25px; 
 }

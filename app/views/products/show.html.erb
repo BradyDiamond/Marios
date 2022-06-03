@@ -1,7 +1,8 @@
-<h1><%= @product.name %></h1>
-<h3>$ <%= @product.cost %>.00</h3>
-<h3><%= @product.country_of_origin %></h3>
-
+<div id="title-text">
+  <h1><%= @product.name %></h1>
+  <h3>$ <%= @product.cost %>.00</h3>
+  <h3><%= @product.country_of_origin %></h3>
+</div>
 <% if @product.reviews.any? %>
   <h4>Here are the reviews for this product:</h4>
 
