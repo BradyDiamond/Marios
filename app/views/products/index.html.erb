@@ -3,8 +3,7 @@
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Coffees
-  </button>
-</div>  
+  </button> 
 
 <% if @products.any? %>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -15,25 +14,34 @@
 <% else %>
   <p>There are no products yet.</p>
 <% end %>
-
-  <p>most reviewed</p>
-  <ul>
-    <% Product.most_reviews.each do |product |%>
-      <li><%= link_to product.name, product_path(product) %> </li>
-    <% end %> 
-  </ul> 
-
+</div>
+<br>
+<div class="row">
+  <div class="col-4">
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    New Selections
+    Most Reviewed
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <% Product.three_most_recent.each do |product |%>
-        <li class="dropdown-item"><%= link_to product.name, product_path(product) %> </li>
-      <% end %> 
-    </ul> 
+      <% Product.most_reviews.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %> </li>
+      <% end %>
+    </div>
+  </ul> 
   </div>
-<br>
+  <div class="col-4">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      New Selections
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <% Product.three_most_recent.each do |product| %>
+          <li class="dropdown-item"><%= link_to product.name, product_path(product) %> </li>
+        <% end %> 
+      </ul> 
+    </div>
+  </div>
+<div class="col-4">
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Coffee frrom the United States
@@ -44,6 +52,7 @@
       <% end %> 
     </ul> 
   </div>
+</div>
   <% if current_user && current_user.admin? == true %>
     <p><%= link_to "Create new product", new_product_path %></p>
   <% end %>
