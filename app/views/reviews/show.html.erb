@@ -14,6 +14,9 @@
   <h3>-- <%= @review.author %></h3>
 </div>
 
+<br>
+  <img id= "mario" src="https://play.nintendo.com/images/Masthead_luigi.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png">
+</div>
 
 <% if current_user && current_user.admin? == true %>
 <p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
