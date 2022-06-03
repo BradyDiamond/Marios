@@ -1,9 +1,15 @@
 <h1>Products</h1>
 
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Coffees
+  </button>
+</div>  
+
 <% if @products.any? %>
-  <ul>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <% @products.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
+      <li class="dropdown-item"><%= link_to product.name, product_path(product) %></li>
     <% end %>
   </ul>
 <% else %>
@@ -17,19 +23,27 @@
     <% end %> 
   </ul> 
 
-  <p>New Coffees</p>
-  <ul>
-    <% Product.three_most_recent.each do |product |%>
-      <li><%= link_to product.name, product_path(product) %> </li>
-    <% end %> 
-  </ul> 
-
-    <p>Coffee from the USA</p>
-  <ul>
-    <% Product.usa.each do |product |%>
-      <li><%= link_to product.name, product_path(product) %> </li>
-    <% end %> 
-  </ul> 
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    New Selections
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <% Product.three_most_recent.each do |product |%>
+        <li class="dropdown-item"><%= link_to product.name, product_path(product) %> </li>
+      <% end %> 
+    </ul> 
+  </div>
+<br>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Coffee frrom the United States
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <% Product.usa.each do |product |%>
+        <li class="dropdown-item"><%= link_to product.name, product_path(product) %> </li>
+      <% end %> 
+    </ul> 
+  </div>
   <% if current_user && current_user.admin? == true %>
     <p><%= link_to "Create new product", new_product_path %></p>
   <% end %>
