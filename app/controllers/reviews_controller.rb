@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new
@@ -8,6 +10,7 @@ class ReviewsController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new(review_params)
+    @review.user = current_user
     if @review.save
       flash[:notice] = "Review successfully posted!"
       redirect_to product_path(@product)

@@ -13,7 +13,7 @@ Review.destroy_all
 50.times do |index|
 Product.create!(name: Faker::Coffee.blend_name,
                   cost: Faker::Number.within(range: 1..500),
-                  country_of_origin: ["USA", "BRZ", "COL", "AUS"].sample(1))
+                  country_of_origin: ["USA", "BRZ", "COL", "AUS"].sample(1).join)
 end
 250.times do
                       Review.create!(author: Faker::Name.name,

@@ -30,4 +30,6 @@
       <li><%= link_to product.name, product_path(product) %> </li>
     <% end %> 
   </ul> 
-<p><%= link_to "Create new product", new_product_path %></p>
+  <% if current_user && current_user.admin? == true %>
+    <p><%= link_to "Create new product", new_product_path %></p>
+  <% end %>
