@@ -15,14 +15,57 @@
  */
 body{
 background-color: darkgrey;
-margin-top: 100px;
+/* margin-top: 100px; */
 margin-bottom: 100px;
 margin-right: 150px;
 margin-left: 80px;
 background-image: url(C:\Users\brady\Desktop\Marios\app\assets\images\pngwing.com.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
 background-size: cover;
+/* background-repeat: no-repeat; */
+background-position: right;
+font-family: 'Bangers', cursive;
 
 }
 .container-fluid{
-  background-color: crimson;
+  background-color: rgb(140, 63, 4);
+}
+
+#intro{
+  color: aliceblue;
+}
+#dropdownMenuButton1{
+  text-align: center;
+  width:150px;   
+  color: aliceblue;
+  background-color: rgb(140, 63, 4);
+}
+#dropdownMenuButton2{
+  width:150px;   
+  color: aliceblue;
+  background-color: rgb(140, 63, 4);
+}
+#dropdownMenuButton3{
+  width:150px;   
+  color: aliceblue;
+  background-color: rgb(140, 63, 4);
+}
+#dropdownMenuButton4{
+  width:150px;   
+  color: aliceblue;
+  background-color: rgb(140, 63, 4);
+}
+#mario{
+  width:350px; 
+  height:350px;     
+  /* padding: 10px; */
+  border-width: 8px;
+  border-style:ridge;
+  border-width: 10px;
+  border-radius: 10px;
+  border-radius: 50%;
+  border-color: rgb(140, 63, 4);
+  box-shadow: 0 20px 40px rgba(4, 0, 0, 0.19), 0 12px 12px rgba(72, 10, 10, 0.23);
+}
+.navbar-brand{
+  color: rgb(250, 33, 5);
 }

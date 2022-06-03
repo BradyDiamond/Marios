@@ -1,4 +1,6 @@
-<h3>Since 2019 Mario's Fine Coffee has worked tirelessly to select and distribute the worls finest coffee to our tens of customers around the globe</h3>
+<div id="intro">
+  <h3>Since 2019 Mario's Fine Coffee has worked tirelessly to select and distribute the worls finest coffee to our tens of customers around the globe</h3>
+</div>
 <br>
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -19,10 +21,10 @@
 <div class="row">
   <div class="col-4">
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
     Most Reviewed
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
       <% Product.most_reviews.each do |product| %>
         <li><%= link_to product.name, product_path(product) %> </li>
       <% end %>
@@ -31,10 +33,10 @@
   </div>
   <div class="col-4">
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
       New Selections
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
         <% Product.three_most_recent.each do |product| %>
           <li class="dropdown-item"><%= link_to product.name, product_path(product) %> </li>
         <% end %> 
@@ -43,15 +45,19 @@
   </div>
 <div class="col-4">
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
     Local Selections
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
       <% Product.usa.each do |product |%>
         <li class="dropdown-item"><%= link_to product.name, product_path(product) %> </li>
       <% end %> 
     </ul> 
   </div>
+</div>
+<div>
+<br>
+  <img id= "mario" src="https://play.nintendo.com/images/Masthead_Mario_HeroPose-updated2021.b19a16e5.ed4a1562.png">
 </div>
   <% if current_user && current_user.admin? == true %>
     <p><%= link_to "Create new product", new_product_path %></p>
