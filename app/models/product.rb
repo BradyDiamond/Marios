@@ -6,7 +6,7 @@ class Product < ApplicationRecord
     select("products.id, products.name, count(reviews.id) as reviews_count")
     .joins(:reviews)
     .group("products.id")
-    .order("tasks_count DESC")
+    .order("reviews_count DESC")
     .limit(1)
     )}
   validates :name, presence: true

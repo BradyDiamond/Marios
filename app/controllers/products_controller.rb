@@ -2,11 +2,13 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @most_reviews = Product.most_reviews
     render :index
   end
 
   def new
     @product = Product.new
+
     render :new
   end
 
@@ -46,6 +48,7 @@ class ProductsController < ApplicationController
     flash[:notice] = "product successfully deleted!"
     redirect_to products_path
   end
+
 
   private
     def product_params
