@@ -14,5 +14,15 @@
  *= require_self
  */
 body{
+background-color: darkgrey;
+margin-top: 100px;
+margin-bottom: 100px;
+margin-right: 150px;
+margin-left: 80px;
+background-image: url(C:\Users\brady\Desktop\Marios\app\assets\images\pngwing.com.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+background-size: cover;
 
+}
+.container-fluid{
+  background-color: crimson;
 }
