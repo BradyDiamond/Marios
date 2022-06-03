@@ -10,8 +10,9 @@
   <p>There are no products yet.</p>
 <% end %>
 
-  <p>most reviewed products.</p>
-
-<% Product.most_reviews%>
-
+  <p>most reviewed</p>
+  <ul>
+    <% Product.most_reviews.each do |product |%>
+      <li><%= link_to product.name%> </li>
+    <% end %>  
 <p><%= link_to "Create new product", new_product_path %></p>
