@@ -1,6 +1,7 @@
-<h1>review: <%= @review.author %></h1>
+
 <h2>product: <%= @product.name %></h2>
-<h3><%= @review.content_body %></h3>
+<h1><%= @review.content_body %></h1>
+<h3>-- <%= @review.author %></h3>
 
 
 <% if current_user && current_user.admin? == true %>
@@ -8,5 +9,5 @@
 <p><%= link_to "Delete review", product_review_path(@product, @review),
                         :data => {:confirm => "Are you sure?",
                                        :method => "delete"} %></p>
-<% end %>
+<% end%>
 <p><%= link_to "Return to Product", product_path(@product) %></p>
