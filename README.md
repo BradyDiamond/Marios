@@ -38,7 +38,7 @@
 
 ## Known Bugs
 
-* _currently no scope support_
+* _currently no known bugs_
 
 ## License
 _licensed under the [MIT License] (LICENSE)_
