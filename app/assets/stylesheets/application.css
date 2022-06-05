@@ -23,9 +23,9 @@ margin-left: 80px;
 background-image: url(C:\Users\brady\Desktop\Marios\app\assets\images\pngwing.com.png), 
 url("https://wallpaperaccess.com/full/6879720.jpg"), 
 linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
-background-size: 940px 1260px, 2560px 1440px ,cover, cover;
+background-size: 940px 1260px, 2560px 1440px, cover;
 background-repeat:no-repeat;
-background-position: right;
+background-position: right, left;
 font-family: 'Bangers', cursive;
 text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
 
