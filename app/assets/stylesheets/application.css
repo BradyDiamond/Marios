@@ -132,6 +132,9 @@ text-shadow: 4px 0 black, -4px 0 black, 0 4px black, 0 -4px black, 2px 2px black
 .green{
   color: rgb(17, 185, 68);
 }
+.black{
+  color: rgb(0, 0, 0);
+}
 #sub-title{
   margin-top: 10px; 
   font-size: 40px;
