@@ -1,3 +1,10 @@
+<div id="app-title">
+<%#MARIOS fine COFFEE %>
+  <p><span id="blue">M</span><span id="yellow">A</span><span id="red">R</span><span id="green">I</span><span id="blue">O</span><span id="yellow">S</span>
+</div>
+<div id= "sub-title" >
+  <span id="blue">f</span><span id="yellow">i<span id="red">n</span><span id="blue">e</span></span> <span id="yellow">C</span><span id="green">O</span><span id="blue">F</span><span id="yellow">F</span><span id="red">E</span><span id="green">E</span></p>
+</div>
 <div id="intro">
   <h3>Since 1984 Mario's Fine Coffee has worked tirelessly to select and distribute the worls finest coffee to our tens of customers around the globe</h3>
 </div>
@@ -8,11 +15,11 @@
   </button> 
 
 <% if @products.any? %>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <% @products.each do |product| %>
-      <li class="dropdown-item"><%= link_to product.name, product_path(product) %></li>
+      <h6 class="dropdown-item"><%= link_to product.name, product_path(product) %></h6>
     <% end %>
-  </ul>
+  </div>
 <% else %>
   <p>There are no products yet.</p>
 <% end %>
@@ -26,7 +33,7 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
       <% Product.most_reviews.each do |product| %>
-        <li><%= link_to product.name, product_path(product) %> </li>
+        <h1><%= link_to product.name, product_path(product) %> </h1>
       <% end %>
     </div>
   </ul> 
@@ -39,7 +46,7 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
         <% Product.three_most_recent.each do |product| %>
-          <li class="dropdown-item"><%= link_to product.name, product_path(product) %> </li>
+          <h3 class="dropdown-item"><%= link_to product.name, product_path(product) %> </h3>
         <% end %> 
       </ul> 
     </div>

@@ -1,7 +1,7 @@
 <div class="row">
   <div id="title-text">
     <div class="col-4">
-      <h1><%= @product.name %></h1>
+      <h1><%= @product.name %> <img id= "coffee" src="https://www.clearbags.com/media/catalog/product/cache/d43c9ecf208a5da92b3916d7b6b66fea/z/i/zipper-pouches-with-valves-zbgm2k-1.jpg"></h1>
       <h3>$ <%= @product.cost %>.00</h3>
       <h3><%= @product.country_of_origin %></h3>
     </div>
@@ -19,7 +19,7 @@
     <% @product.reviews.each do |review| %>
       <ul>
         <li>
-          <%= link_to review.author, product_review_path(@product, review) %>
+          <h3><%= link_to review.author, product_review_path(@product, review) %></h3>
         </li>
       </ul>
     <% end %>

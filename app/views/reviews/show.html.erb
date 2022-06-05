@@ -12,6 +12,7 @@
   <% end %>
   <h1><%= @review.content_body %></h1>
   <h3>-- <%= @review.author %></h3>
+  <h3>Avg Rating of all products = <%= Review.average(:rating).round(2) %>       <img id="star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></td>
 </div>
 
 <br>
