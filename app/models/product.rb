@@ -10,7 +10,7 @@ class Product < ApplicationRecord
     .limit(1)
     )}
   validates :name, presence: true
-  validates :cost, presence: true, numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 10000000 }
+  validates :cost, presence: true, numericality: { greater_than_or_equal_to: 1}
   validates :country_of_origin, presence: true
   before_save(:titleize_product)
 end

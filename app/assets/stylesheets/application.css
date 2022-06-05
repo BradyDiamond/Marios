@@ -31,18 +31,20 @@ text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black
 
 }
 .container-fluid{
-  background-color: rgb(140, 63, 4);
+  /* background-color: rgb(140, 63, 4); */
+  background-image: linear-gradient(to right,  rgb(255, 255, 255), rgba(140, 63, 4));
 }
 
 #intro{
   color: aliceblue;
 }
 #dropdownMenuButton1{
+  background-image: linear-gradient(to right, rgba(140, 63, 4), rgb(255, 255, 255));
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
   text-align: center;
   width:100%;   
   color: aliceblue;
-  background-color: rgb(140, 63, 4);
+
 }
 #dropdownMenuButton2{
   width:100%;
@@ -77,6 +79,7 @@ text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black
   transition: all 10s;
 }
 .navbar-brand{
+  background-image: linear-gradient(to right, rgba(140, 63, 4), rgb(255, 255, 255));
   color: rgb(250, 33, 5);
 }
 #form{
