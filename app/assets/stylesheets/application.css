@@ -16,7 +16,6 @@
 body{
 
 background-color: darkgrey;
-/* margin-top: 100px; */
 margin-bottom: 100px;
 margin-right: 150px;
 margin-left: 80px;
@@ -84,7 +83,6 @@ text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black
   transition: all 10s;
 }
 .navbar-brand{
-  /* background-image: linear-gradient(to right, rgba(140, 63, 4), rgb(255, 255, 255)); */
   color: rgb(250, 33, 5);
 }
 #form{
@@ -123,16 +121,15 @@ text-align: center;
 text-shadow: 4px 0 black, -4px 0 black, 0 4px black, 0 -4px black, 2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
 
 }
-#blue{
+.blue{
   color: rgb(29, 36, 246);
 }
-#yellow{
+.yellow{
   color: rgb(239, 239, 11);
-}
-#red{
+}.red{
   color: rgb(255, 30, 0);
 }
-#green{
+.green{
   color: rgb(17, 185, 68);
 }
 #sub-title{
