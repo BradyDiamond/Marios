@@ -144,4 +144,8 @@ background-repeat:no-repeat;
   margin-top: 10px; 
   font-size: 40px;
   text-align: center;
-  }
+}
+.yellow-smaller{
+  font-size: 75px;
+  color: rgb(239, 239, 11);
+}
