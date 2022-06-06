@@ -34,7 +34,7 @@ text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black
   height: auto;
   position: absolute;
   top: 0px;
-  background-image: linear-gradient(to right,  rgb(255, 255, 255), rgba(140, 63, 4));
+  background-image: url(https://play.nintendo.com/images/theme-pattern-mk-generic-dk-grey.92a07c52.png);
 }
 
 #intro{
@@ -42,7 +42,7 @@ text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black
   color: aliceblue;
 }
 #dropdownMenuButton1{
-  background-image: linear-gradient(to right, rgba(140, 63, 4), rgb(255, 255, 255));
+  background-image: url(https://play.nintendo.com/images/theme-pattern-mk-generic-dk-grey.92a07c52.png);
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
   text-align: center;
   width:100%;   
@@ -53,19 +53,19 @@ text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black
   width:100%;
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
   color: aliceblue;
-  background-color: rgb(140, 63, 4);
+  background-image: url(https://play.nintendo.com/images/theme-pattern-mk-generic-dk-grey.92a07c52.png);
 }
 #dropdownMenuButton3{
   width:100%;
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
   color: aliceblue;
-  background-color: rgb(140, 63, 4);
+  background-image: url(https://play.nintendo.com/images/theme-pattern-mk-generic-dk-grey.92a07c52.png);
 }
 #dropdownMenuButton4{
   width:100%;
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
   color: aliceblue;
-  background-color: rgb(140, 63, 4);
+  background-image: url(https://play.nintendo.com/images/theme-pattern-mk-generic-dk-grey.92a07c52.png);
 }
 #mario{
   width:350px; 
@@ -107,7 +107,7 @@ text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black
 }
 #mario:hover{
   transform: scale(1.4) rotate(10deg);
-  transition: all 10s;
+  transition: all 8s;
 }
 #peach:hover{
   transform: scale(1.4) rotate(10deg);
