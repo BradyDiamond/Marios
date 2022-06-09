@@ -1,3 +1,10 @@
 <h1>Edit a review:</h1>
 
+<% if current_user && current_user.admin? == true %>
 <%= render "layouts/review_form" %>
+<% else %>
+<p>YOU DONT HAVE PERMISSION TO ADD A PRODUCT</p>
+<p><%= link_to "Return to products", products_path %></p>
+<% end %>
+
+

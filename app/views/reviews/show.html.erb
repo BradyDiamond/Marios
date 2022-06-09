@@ -1,31 +1,35 @@
-<div id="title-text">
-  <% if  @review.rating == 1 %>
-  <h2><%= @product.name %> - <img id="star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></h2>
-  <% elsif @review.rating == 2 %>
-  <h2><%= @product.name %> - <img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></h2>
-   <% elsif @review.rating == 3 %>
-  <h2><%= @product.name %> - <img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></h2>
-   <% elsif @review.rating == 4 %>
-  <h2><%= @product.name %> - <img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></h2>
-  <% else %>
-  <h2><%= @product.name %> - <img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></h2>
-  <% end %>
+<div class="row"> 
+  <div class="col-4">
+  <div id="title-text">
+    <% if  @review.rating == 1 %>
+    <h2><%= @product.name %> - <img id="star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></h2>
+    <% elsif @review.rating == 2 %>
+    <h2><%= @product.name %> - <img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></h2>
+    <% elsif @review.rating == 3 %>
+    <h2><%= @product.name %> - <img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></h2>
+    <% elsif @review.rating == 4 %>
+    <h2><%= @product.name %> - <img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></h2>
+    <% else %>
+    <h2><%= @product.name %> - <img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"><img id= "star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></h2>
+    <% end %>
+  </div>
+  <div class ="blue">
+    <h1><%= @review.content_body %></h1>
+  </div>
+  <div class="yellow">
+    <h3>-- <%= @review.author %></h3>  
+    <h3>Avg Rating of all products = <%= Review.average(:rating).round(2) %>       <img id="star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></td>
+  </div>
+  <% if current_user && current_user.admin? == true %>
+  <p><%= link_to "Edit review", edit_product_review_path(@product, @review) %> -- <%= link_to "Delete review", product_review_path(@product, @review),
+                          :data => {:confirm => "Are you sure?",
+                                        :method => "delete"} %></p>
+  <% end%>
+  <p><%= link_to "Return to Product", product_path(@product) %></p>
 </div>
-<div class ="blue">
-  <h1><%= @review.content_body %></h1>
+<div class = "col-8">
+  <br>
+    <img id= "bowser" src="https://play.nintendo.com/images/Masthead_Bowser.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png">
 </div>
-<div class="yellow">
-  <h3>-- <%= @review.author %></h3>  
-  <h3>Avg Rating of all products = <%= Review.average(:rating).round(2) %>       <img id="star" src="https://www.clipartmax.com/png/full/27-272950_super-mario-star-coins-clipart-free-mario-star-coin.png"></td>
 </div>
-<% if current_user && current_user.admin? == true %>
-<p><%= link_to "Edit review", edit_product_review_path(@product, @review) %> -- <%= link_to "Delete review", product_review_path(@product, @review),
-                        :data => {:confirm => "Are you sure?",
-                                       :method => "delete"} %></p>
-<% end%>
-<p><%= link_to "Return to Product", product_path(@product) %></p>
-
-<br>
-  <img id= "bowser" src="https://play.nintendo.com/images/Masthead_Bowser.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png">
-
 

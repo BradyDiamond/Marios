@@ -1,3 +1,7 @@
 <h1>Edit Product</h1>
-
+<% if current_user && current_user.admin? == true %>
 <%= render "layouts/product_form" %>
+<% else %>
+<p>YOU DONT HAVE PERMISSION TO EDIT A PRODUCT</p>
+<p><%= link_to "Return to products", products_path %></p>
+<% end %>

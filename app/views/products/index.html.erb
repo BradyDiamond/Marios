@@ -38,7 +38,7 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
         <% Product.most_reviews.each do |product| %>
-          <h1><%= link_to product.name, product_path(product) %> </h1>
+          <h1><%= link_to product.name, product_path(product) %></h1>
         <% end %>
       </div>
     </ul> 
