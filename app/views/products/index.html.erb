@@ -18,7 +18,7 @@
   </button> 
 
 <% if @products.any? %>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  <div class="dropdown-menu" id="coffee-menu" aria-labelledby="dropdownMenuButton1">
     <% @products.each do |product| %>
       <h6 class="dropdown-item"><%= link_to product.name, product_path(product) %></h6>
     <% end %>
@@ -36,7 +36,7 @@
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
       Mario's Most Reviewed
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+      <ul class="dropdown-menu" id="mario-menu" aria-labelledby="dropdownMenuButton2">
         <% Product.most_reviews.each do |product| %>
           <h1><%= link_to product.name, product_path(product) %></h1>
         <% end %>
@@ -52,7 +52,7 @@
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
         Peach's NEW picks
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+        <ul class="dropdown-menu"  id="peach-menu" aria-labelledby="dropdownMenuButton3">
           <% Product.three_most_recent.each do |product| %>
             <h3 class="dropdown-item"><%= link_to product.name, product_path(product) %> </h3>
           <% end %> 
@@ -68,7 +68,7 @@
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
       Luigis Local Selections
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+      <ul class="dropdown-menu" id="luigi-menu" aria-labelledby="dropdownMenuButton4">
         <% Product.usa.each do |product |%>
           <li class="dropdown-item"><%= link_to product.name, product_path(product) %> </li>
         <% end %> 

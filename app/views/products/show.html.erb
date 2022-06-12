@@ -40,13 +40,6 @@
 
 
 
-<% if current_user && current_user.admin? == true %>
-<p><%= link_to "Edit", edit_product_path(@product) %> -- <%= link_to "Delete", product_path(@product),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
-<%end%>
-<p><%= link_to "Return to products", products_path %></p>
-
 
 
 
