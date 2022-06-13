@@ -127,6 +127,7 @@ end
             end
             click_link('Delete')
             expect(page).to_not have_content('Testproduct')
+            expect(page).to have_content('Create new product')
           end
         end
       end
