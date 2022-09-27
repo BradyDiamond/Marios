@@ -17,8 +17,7 @@ Product.create!(name: Faker::Coffee.blend_name,
 end
 250.times do
                       Review.create!(author: Faker::Name.name,
-                      product_id: Product.all.sample(1)[0].id,
-    
+                      product_id: Product.all.sample(1)[0].id,   
                       rating: Faker::Number.within(range: 1..5),
                       content_body: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: false))                  
 end      
